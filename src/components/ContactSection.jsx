@@ -93,7 +93,7 @@ import React from 'react';
 
 function ContactSection() {
   return (
-    <section className="w-full bg-gradient-to-b from-black to-red-500 py-12">
+    <section id="contact-form" className="w-full bg-gradient-to-b from-black to-red-500 py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
         
         {/* Left Side: Contact Info and Benefits */}
@@ -132,7 +132,7 @@ function ContactSection() {
         </div>
         
         {/* Right Side: Consultation Form */}
-        <div className="bg-white shadow-lg rounded-lg p-6">
+        <div id="contact-form" className="bg-white shadow-lg rounded-lg p-6">
           <h2 className="text-xl font-bold text-[#1b0a3f] mb-4 text-center">
             Schedule a Free Consultation <span className="text-green-500">✔️</span>
           </h2>

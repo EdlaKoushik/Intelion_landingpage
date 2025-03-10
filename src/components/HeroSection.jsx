@@ -124,3 +124,1930 @@ const HeroSection = () => {
 
 export default HeroSection;
 
+ // with plain css
+
+// import React from 'react';
+
+// const HeroSection = () => {
+//   return (
+//     <>
+//       <style>
+//         {`
+//           .hero-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-section {
+//               padding: 4rem 2rem;
+//             }
+//           }
+//           .hero-container {
+//             max-width: 1280px;
+//             margin: 0 auto;
+//             display: grid;
+//             gap: 3rem;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-container {
+//               grid-template-columns: 1fr 1fr;
+//             }
+//           }
+//           .hero-text {
+//             text-align: center;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text {
+//               text-align: left;
+//             }
+//           }
+//           .hero-text h2 {
+//             font-size: 1.875rem;
+//             font-weight: 800;
+//             color: #1a202c;
+//             line-height: 1.375;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text h2 {
+//               font-size: 3rem;
+//             }
+//           }
+//           .hero-text p {
+//             margin-top: 1rem;
+//             font-size: 1rem;
+//             color: #4a5568;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text p {
+//               font-size: 1.125rem;
+//             }
+//           }
+//           .hero-buttons {
+//             margin-top: 2rem;
+//             display: flex;
+//             flex-direction: column;
+//             gap: 1rem;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-buttons {
+//               flex-direction: row;
+//               gap: 1rem;
+//             }
+//           }
+//           .hero-buttons button {
+//             padding: 0.5rem 1rem;
+//             border-radius: 0.375rem;
+//             font-weight: 500;
+//             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+//             cursor: pointer;
+//             transition: background-color 0.3s;
+//           }
+//           .hero-buttons button:first-child {
+//             background-color: #ef4444;
+//             color: white;
+//           }
+//           .hero-buttons button:first-child:hover {
+//             background-color: #dc2626;
+//           }
+//           .hero-buttons button:last-child {
+//             background-color: black;
+//             color: white;
+//           }
+//           .hero-buttons button:last-child:hover {
+//             background-color: #1a202c;
+//           }
+//           .hero-image {
+//             position: relative;
+//           }
+//           .hero-image div {
+//             overflow: hidden;
+//             border-radius: 0.5rem;
+//             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+//             clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+//           }
+//           .hero-image img {
+//             width: 100%;
+//             height: auto;
+//             object-fit: cover;
+//             transition: transform 0.3s;
+//           }
+//           .hero-image img:hover {
+//             transform: scale(1.05);
+//           }
+//           .stats-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//           }
+//           .stats-grid {
+//             display: grid;
+//             gap: 1.5rem;
+//             text-align: center;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid {
+//               grid-template-columns: repeat(6, 1fr);
+//             }
+//           }
+//           .stats-grid div {
+//             padding: 1rem;
+//           }
+//           .stats-grid p {
+//             font-size: 0.75rem;
+//             color: #6b7280;
+//           }
+//           .stats-grid h3 {
+//             font-size: 1.5rem;
+//             font-weight: 700;
+//             color: #1a202c;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid h3 {
+//               font-size: 2.25rem;
+//             }
+//           }
+//           .stats-grid .stars {
+//             color: #ef4444;
+//             font-size: 0.875rem;
+//             font-weight: 700;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid .stars {
+//               font-size: 1.125rem;
+//             }
+//           }
+//           .what-we-do-section {
+//             background-color: black;
+//             color: white;
+//             padding: 3rem 1rem;
+//             text-align: center;
+//           }
+//           .what-we-do-section p {
+//             color: #fbbf24;
+//             font-size: 0.875rem;
+//             font-weight: 600;
+//             margin-bottom: 1rem;
+//           }
+//           .what-we-do-section h2 {
+//             font-size: 1.875rem;
+//             font-weight: 800;
+//             line-height: 1.375;
+//           }
+//           @media (min-width: 768px) {
+//             .what-we-do-section h2 {
+//               font-size: 2.25rem;
+//             }
+//           }
+//           .services-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//           }
+//           @media (min-width: 768px) {
+//             .services-section {
+//               padding: 4rem 2rem;
+//             }
+//           }
+//           .services-grid {
+//             max-width: 1280px;
+//             margin: 0 auto;
+//             display: grid;
+//             gap: 2rem;
+//           }
+//           @media (min-width: 640px) {
+//             .services-grid {
+//               grid-template-columns: repeat(2, 1fr);
+//             }
+//           }
+//           @media (min-width: 768px) {
+//             .services-grid {
+//               grid-template-columns: repeat(4, 1fr);
+//             }
+//           }
+//           .services-grid div {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             text-align: center;
+//           }
+//           .services-grid img {
+//             width: 3rem;
+//             height: 3rem;
+//             margin-bottom: 1rem;
+//           }
+//           .services-grid h3 {
+//             font-size: 1.125rem;
+//             font-weight: 700;
+//             color: #1a202c;
+//             margin-bottom: 0.5rem;
+//           }
+//           @media (min-width: 768px) {
+//             .services-grid h3 {
+//               font-size: 1.25rem;
+//             }
+//           }
+//           .services-grid p {
+//             font-size: 0.875rem;
+//             color: #4a5568;
+//           }
+//         `}
+//       </style>
+
+//       {/* Hero Section */}
+//       <section className="hero-section">
+//         <div className="hero-container">
+//           {/* Left Side - Text Content */}
+//           <div className="hero-text">
+//             <h2>
+//               We manage your IT, <br /> so you can manage your business.
+//             </h2>
+//             <p>
+//               Take charge of your business continuity with innovative IT solutions.
+//             </p>
+//             <div className="hero-buttons">
+//               <button>Schedule a Free Consultation</button>
+//               <button>Services</button>
+//             </div>
+//           </div>
+
+//           {/* Right Side - Image */}
+//           <div className="hero-image">
+//             <div>
+//               <img src="./heroimage.jpg" alt="Team" />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Divider */}
+//       <hr className="border-t-2 border-gray-300 my-8 mx-auto max-w-7xl" />
+
+//       {/* Stats Section */}
+//       <section className="stats-section">
+//         <div className="stats-grid">
+//           <div>
+//             <p>REVIEWED ON</p>
+//             <h3>Clutch</h3>
+//             <p className="stars">★★★★★</p>
+//             <p>2K+ REVIEWS</p>
+//           </div>
+//           <div>
+//             <h4>08 Years</h4>
+//             <p>Proven Track Record</p>
+//           </div>
+//           <div>
+//             <h4>98%</h4>
+//             <p>Customer Satisfaction</p>
+//           </div>
+//           <div>
+//             <h4>470+ Projects</h4>
+//             <p>We Have Completed</p>
+//           </div>
+//           <div>
+//             <h4>3 Mins</h4>
+//             <p>Average Answer Time</p>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* What We Do Section */}
+//       <section className="what-we-do-section">
+//         <p>WHAT WE DO</p>
+//         <h2>
+//           Simplifying IT <br /> for a complex world.
+//         </h2>
+//       </section>
+
+//       {/* Services Section */}
+//       <section className="services-section">
+//         <div className="services-grid">
+//           <div>
+//             <img src="./coinimage.png" alt="Cost-effectiveness" />
+//             <h3>Cost-effectiveness</h3>
+//             <p>
+//               Affordable IT solutions to reduce costs and improve your bottom line.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./innovative.png" alt="Innovative Technology" />
+//             <h3>Innovative Technology</h3>
+//             <p>
+//               Keeping you ahead with the latest technology trends.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./industries.png" alt="Industry Expertise" />
+//             <h3>Industry Expertise</h3>
+//             <p>
+//               Specialized in healthcare, finance, and manufacturing industries.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./industries-1.png" alt="Scalability" />
+//             <h3>Scalability</h3>
+//             <p>
+//               Solutions that grow with your business efficiently.
+//             </p>
+//           </div>
+//         </div>
+//       </section>
+//     </>
+//   );
+// };
+
+// export default HeroSection;
+
+
+
+//updated plain css 
+// import React from 'react';
+
+// const HeroSection = () => {
+//   return (
+//     <>
+//       <style>
+//         {`
+//           .hero-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-section {
+//               padding: 4rem 2rem;
+//             }
+//           }
+//           .hero-container {
+//             max-width: 1280px;
+//             margin: 0 auto;
+//             display: grid;
+//             gap: 3rem;
+//             align-items: center;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-container {
+//               grid-template-columns: 1fr 1fr;
+//             }
+//           }
+//           .hero-text {
+//             text-align: center;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text {
+//               text-align: left;
+//             }
+//           }
+//           .hero-text h2 {
+//             font-size: 1.875rem;
+//             font-weight: 800;
+//             color: #1a202c;
+//             line-height: 1.375;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text h2 {
+//               font-size: 3rem;
+//             }
+//           }
+//           .hero-text p {
+//             margin-top: 1rem;
+//             font-size: 1rem;
+//             color: #4a5568;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text p {
+//               font-size: 1.125rem;
+//             }
+//           }
+//           .hero-buttons {
+//             margin-top: 2rem;
+//             display: flex;
+//             flex-direction: column;
+//             gap: 1rem;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-buttons {
+//               flex-direction: row;
+//               gap: 1rem;
+//             }
+//           }
+//           .hero-buttons button {
+//             padding: 0.5rem 1rem;
+//             border-radius: 0.375rem;
+//             font-weight: 500;
+//             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+//             cursor: pointer;
+//             transition: background-color 0.3s;
+//           }
+//           .hero-buttons button:first-child {
+//             background-color: #ef4444;
+//             color: white;
+//           }
+//           .hero-buttons button:first-child:hover {
+//             background-color: #dc2626;
+//           }
+//           .hero-buttons button:last-child {
+//             background-color: black;
+//             color: white;
+//           }
+//           .hero-buttons button:last-child:hover {
+//             background-color: #1a202c;
+//           }
+//           .hero-image {
+//             position: relative;
+//           }
+//           .hero-image div {
+//             overflow: hidden;
+//             border-radius: 0.5rem;
+//             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+//             clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+//           }
+//           .hero-image img {
+//             width: 100%;
+//             height: auto;
+//             object-fit: cover;
+//             transition: transform 0.3s;
+//           }
+//           .hero-image img:hover {
+//             transform: scale(1.05);
+//           }
+//           .divider {
+//             border-top: 2px solid #e5e7eb;
+//             margin: 2rem auto;
+//             max-width: 1280px;
+//           }
+//           .stats-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//           }
+//           .stats-grid {
+//             display: grid;
+//             gap: 1.5rem;
+//             text-align: center;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid {
+//               grid-template-columns: repeat(6, 1fr);
+//             }
+//           }
+//           .stats-grid div {
+//             padding: 1rem;
+//           }
+//           .stats-grid p {
+//             font-size: 0.75rem;
+//             color: #6b7280;
+//           }
+//           .stats-grid h3 {
+//             font-size: 1.5rem;
+//             font-weight: 700;
+//             color: #1a202c;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid h3 {
+//               font-size: 2.25rem;
+//             }
+//           }
+//           .stats-grid .stars {
+//             color: #ef4444;
+//             font-size: 0.875rem;
+//             font-weight: 700;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid .stars {
+//               font-size: 1.125rem;
+//             }
+//           }
+//           .what-we-do-section {
+//             background-color: black;
+//             color: white;
+//             padding: 3rem 1rem;
+//             text-align: center;
+//           }
+//           .what-we-do-section p {
+//             color: #fbbf24;
+//             font-size: 0.875rem;
+//             font-weight: 600;
+//             margin-bottom: 1rem;
+//           }
+//           .what-we-do-section h2 {
+//             font-size: 1.875rem;
+//             font-weight: 800;
+//             line-height: 1.375;
+//           }
+//           @media (min-width: 768px) {
+//             .what-we-do-section h2 {
+//               font-size: 2.25rem;
+//             }
+//           }
+//           .services-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//           }
+//           @media (min-width: 768px) {
+//             .services-section {
+//               padding: 4rem 2rem;
+//             }
+//           }
+//           .services-grid {
+//             max-width: 1280px;
+//             margin: 0 auto;
+//             display: grid;
+//             gap: 2rem;
+//           }
+//           @media (min-width: 640px) {
+//             .services-grid {
+//               grid-template-columns: repeat(2, 1fr);
+//             }
+//           }
+//           @media (min-width: 768px) {
+//             .services-grid {
+//               grid-template-columns: repeat(4, 1fr);
+//             }
+//           }
+//           .services-grid div {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             text-align: center;
+//           }
+//           .services-grid img {
+//             width: 3rem;
+//             height: 3rem;
+//             margin-bottom: 1rem;
+//           }
+//           .services-grid h3 {
+//             font-size: 1.125rem;
+//             font-weight: 700;
+//             color: #1a202c;
+//             margin-bottom: 0.5rem;
+//           }
+//           @media (min-width: 768px) {
+//             .services-grid h3 {
+//               font-size: 1.25rem;
+//             }
+//           }
+//           .services-grid p {
+//             font-size: 0.875rem;
+//             color: #4a5568;
+//           }
+//         `}
+//       </style>
+
+//       {/* Hero Section */}
+//       <section className="hero-section">
+//         <div className="hero-container">
+//           {/* Left Side - Text Content */}
+//           <div className="hero-text">
+//             <h2>
+//               We manage your IT, <br /> so you can manage your business.
+//             </h2>
+//             <p>
+//               Take charge of your business continuity with innovative IT solutions.
+//             </p>
+//             <div className="hero-buttons">
+//               <button>Schedule a Free Consultation</button>
+//               <button>Services</button>
+//             </div>
+//           </div>
+
+//           {/* Right Side - Image */}
+//           <div className="hero-image">
+//             <div>
+//               <img src="./heroimage.jpg" alt="Team" />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Divider */}
+//       <hr className="divider" />
+
+//       {/* Stats Section */}
+//       <section className="stats-section">
+//         <div className="stats-grid">
+//           <div>
+//             <p>REVIEWED ON</p>
+//             <h3>Clutch</h3>
+//             <p className="stars">★★★★★</p>
+//             <p>2K+ REVIEWS</p>
+//           </div>
+//           <div>
+//             <h4>08 Years</h4>
+//             <p>Proven Track Record</p>
+//           </div>
+//           <div>
+//             <h4>98%</h4>
+//             <p>Customer Satisfaction</p>
+//           </div>
+//           <div>
+//             <h4>470+ Projects</h4>
+//             <p>We Have Completed</p>
+//           </div>
+//           <div>
+//             <h4>3 Mins</h4>
+//             <p>Average Answer Time</p>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* What We Do Section */}
+//       <section className="what-we-do-section">
+//         <p>WHAT WE DO</p>
+//         <h2>
+//           Simplifying IT <br /> for a complex world.
+//         </h2>
+//       </section>
+
+//       {/* Services Section */}
+//       <section className="services-section mb-4">
+//         <div className="services-grid">
+//           <div>
+//             <img src="./coinimage.png" alt="Cost-effectiveness" />
+//             <h3>Cost-effectiveness</h3>
+//             <p>
+//               Affordable IT solutions to reduce costs and improve your bottom line.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./innovative.png" alt="Innovative Technology" />
+//             <h3>Innovative Technology</h3>
+//             <p>
+//               Keeping you ahead with the latest technology trends.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./industries.png" alt="Industry Expertise" />
+//             <h3>Industry Expertise</h3>
+//             <p>
+//               Specialized in healthcare, finance, and manufacturing industries.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./industries-1.png" alt="Scalability" />
+//             <h3>Scalability</h3>
+//             <p>
+//               Solutions that grow with your business efficiently.
+//             </p>
+//           </div>
+//         </div>
+//       </section>
+//     </>
+//   );
+// };
+
+// export default HeroSection;
+
+// import React from 'react';
+
+// const HeroSection = () => {
+//   return (
+//     <>
+//       <style>
+//         {`
+//           .hero-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-section {
+//               padding: 4rem 2rem;
+//             }
+//           }
+//           .hero-container {
+//             max-width: 1280px;
+//             margin: 0 auto;
+//             display: grid;
+//             gap: 3rem;
+//             align-items: center;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-container {
+//               grid-template-columns: 1fr 1fr;
+//             }
+//           }
+//           .hero-text {
+//             text-align: center;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text {
+//               text-align: left;
+//             }
+//           }
+//           .hero-text h2 {
+//             font-size: 1.875rem;
+//             font-weight: 800;
+//             color: #1a202c;
+//             line-height: 1.375;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text h2 {
+//               font-size: 3rem;
+//             }
+//           }
+//           .hero-text p {
+//             margin-top: 1rem;
+//             font-size: 1rem;
+//             color: #4a5568;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text p {
+//               font-size: 1.125rem;
+//             }
+//           }
+//           .hero-buttons {
+//             margin-top: 2rem;
+//             display: flex;
+//             flex-direction: column;
+//             gap: 1rem;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-buttons {
+//               flex-direction: row;
+//               gap: 1rem;
+//             }
+//           }
+//           .hero-buttons button {
+//             padding: 0.5rem 1rem;
+//             border-radius: 0.375rem;
+//             font-weight: 500;
+//             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+//             cursor: pointer;
+//             transition: background-color 0.3s;
+//           }
+//           .hero-buttons button:first-child {
+//             background-color: #ef4444;
+//             color: white;
+//           }
+//           .hero-buttons button:first-child:hover {
+//             background-color: #dc2626;
+//           }
+//           .hero-buttons button:last-child {
+//             background-color: black;
+//             color: white;
+//           }
+//           .hero-buttons button:last-child:hover {
+//             background-color: #1a202c;
+//           }
+//           .hero-image {
+//             position: relative;
+//           }
+//           .hero-image div {
+//             overflow: hidden;
+//             border-radius: 0.5rem;
+//             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+//             clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+//           }
+//           .hero-image img {
+//             width: 100%;
+//             height: auto;
+//             object-fit: cover;
+//             transition: transform 0.3s;
+//           }
+//           .hero-image img:hover {
+//             transform: scale(1.05);
+//           }
+//           .divider {
+//             border-top: 2px solid #e5e7eb;
+//             margin: 2rem auto;
+//             max-width: 1280px;
+//           }
+//           .stats-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//           }
+//           .stats-grid {
+//             display: grid;
+//             gap: 1.5rem;
+//             text-align: center;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid {
+//               grid-template-columns: repeat(6, 1fr);
+//             }
+//           }
+//           .stats-grid div {
+//             padding: 1rem;
+//           }
+//           .stats-grid p {
+//             font-size: 0.75rem;
+//             color: #6b7280;
+//           }
+//           .stats-grid h3 {
+//             font-size: 1.5rem;
+//             font-weight: 700;
+//             color: #1a202c;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid h3 {
+//               font-size: 2.25rem;
+//             }
+//           }
+//           .stats-grid .stars {
+//             color: #ef4444;
+//             font-size: 0.875rem;
+//             font-weight: 700;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid .stars {
+//               font-size: 1.125rem;
+//             }
+//           }
+//           .what-we-do-section {
+//             background-color: black;
+//             color: white;
+//             padding: 3rem 1rem;
+//             text-align: center;
+//           }
+//           .what-we-do-section p {
+//             color: #fbbf24;
+//             font-size: 0.875rem;
+//             font-weight: 600;
+//             margin-bottom: 1rem;
+//           }
+//           .what-we-do-section h2 {
+//             font-size: 1.875rem;
+//             font-weight: 800;
+//             line-height: 1.375;
+//           }
+//           @media (min-width: 768px) {
+//             .what-we-do-section h2 {
+//               font-size: 2.25rem;
+//             }
+//           }
+//           .services-section {
+//             background-color: white;
+//             padding: 4rem 1rem;
+//             margin-top: 2rem;
+//             margin-bottom: 2rem;
+//           }
+//           @media (min-width: 768px) {
+//             .services-section {
+//               padding: 4rem 2rem;
+//             }
+//           }
+//           .services-grid {
+//             max-width: 1280px;
+//             margin: 0 auto;
+//             display: grid;
+//             gap: 2rem;
+//           }
+//           @media (min-width: 640px) {
+//             .services-grid {
+//               grid-template-columns: repeat(2, 1fr);
+//             }
+//           }
+//           @media (min-width: 768px) {
+//             .services-grid {
+//               grid-template-columns: repeat(4, 1fr);
+//             }
+//           }
+//           .services-grid div {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             text-align: center;
+//           }
+//           .services-grid img {
+//             width: 3rem;
+//             height: 3rem;
+//             margin-bottom: 1rem;
+//           }
+//           .services-grid h3 {
+//             font-size: 1.125rem;
+//             font-weight: 700;
+//             color: #1a202c;
+//             margin-bottom: 0.5rem;
+//           }
+//           @media (min-width: 768px) {
+//             .services-grid h3 {
+//               font-size: 1.25rem;
+//             }
+//           }
+//           .services-grid p {
+//             font-size: 0.875rem;
+//             color: #4a5568;
+//           }
+//         `}
+//       </style>
+
+//       {/* Hero Section */}
+//       <section className="hero-section">
+//         <div className="hero-container">
+//           {/* Left Side - Text Content */}
+//           <div className="hero-text">
+//             <h2>
+//               We manage your IT, <br /> so you can manage your business.
+//             </h2>
+//             <p>
+//               Take charge of your business continuity with innovative IT solutions.
+//             </p>
+//             <div className="hero-buttons">
+//               <button>Schedule a Free Consultation</button>
+//               <button>Services</button>
+//             </div>
+//           </div>
+
+//           {/* Right Side - Image */}
+//           <div className="hero-image">
+//             <div>
+//               <img src="./heroimage.jpg" alt="Team" />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Divider */}
+//       <hr className="divider" />
+
+//       {/* Stats Section */}
+//       <section className="stats-section">
+//         <div className="stats-grid">
+//           <div>
+//             <p>REVIEWED ON</p>
+//             <h3>Clutch</h3>
+//             <p className="stars">★★★★★</p>
+//             <p>2K+ REVIEWS</p>
+//           </div>
+//           <div>
+//             <h4>08 Years</h4>
+//             <p>Proven Track Record</p>
+//           </div>
+//           <div>
+//             <h4>98%</h4>
+//             <p>Customer Satisfaction</p>
+//           </div>
+//           <div>
+//             <h4>470+ Projects</h4>
+//             <p>We Have Completed</p>
+//           </div>
+//           <div>
+//             <h4>3 Mins</h4>
+//             <p>Average Answer Time</p>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* What We Do Section */}
+//       <section className="what-we-do-section">
+//         <p>WHAT WE DO</p>
+//         <h2>
+//           Simplifying IT <br /> for a complex world.
+//         </h2>
+//       </section>
+
+//       {/* Services Section */}
+//       <section className="services-section">
+//         <div className="services-grid">
+//           <div>
+//             <img src="./coinimage.png" alt="Cost-effectiveness" />
+//             <h3>Cost-effectiveness</h3>
+//             <p>
+//               Affordable IT solutions to reduce costs and improve your bottom line.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./innovative.png" alt="Innovative Technology" />
+//             <h3>Innovative Technology</h3>
+//             <p>
+//               Keeping you ahead with the latest technology trends.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./industries.png" alt="Industry Expertise" />
+//             <h3>Industry Expertise</h3>
+//             <p>
+//               Specialized in healthcare, finance, and manufacturing industries.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./industries-1.png" alt="Scalability" />
+//             <h3>Scalability</h3>
+//             <p>
+//               Solutions that grow with your business efficiently.
+//             </p>
+//           </div>
+//         </div>
+//       </section>
+//     </>
+//   );
+// };
+
+// export default HeroSection;
+
+
+
+// import React from 'react';
+
+// const HeroSection = () => {
+//   return (
+//     <>
+//       <style>
+//         {`
+//           .hero-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//           }
+//           .hero-container {
+//             max-width: 1280px;
+//             margin: 0 auto;
+//             display: grid;
+//             grid-template-columns: 1fr;
+//             gap: 3rem;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-section {
+//               padding: 4rem 2rem;
+//             }
+//             .hero-container {
+//               grid-template-columns: 1fr 1fr;
+//             }
+//           }
+//           .hero-text {
+//             text-align: center;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text {
+//               text-align: left;
+//             }
+//           }
+//           .hero-heading {
+//             font-size: 2rem;
+//             font-weight: 800;
+//             color: #1f2937;
+//             line-height: 1.2;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-heading {
+//               font-size: 3rem;
+//             }
+//           }
+//           .hero-description {
+//             margin-top: 1rem;
+//             font-size: 1rem;
+//             color: #4b5563;
+//           }
+//           .button-group {
+//             margin-top: 2rem;
+//             display: flex;
+//             flex-direction: column;
+//             gap: 1rem;
+//           }
+//           @media (min-width: 768px) {
+//             .button-group {
+//               flex-direction: row;
+//             }
+//           }
+//           .btn {
+//             padding: 0.5rem 1rem;
+//             border-radius: 0.375rem;
+//             font-weight: 500;
+//             cursor: pointer;
+//             transition: background-color 0.3s;
+//             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//           }
+//           .btn-red {
+//             background-color: #ef4444;
+//             color: white;
+//           }
+//           .btn-red:hover {
+//             background-color: #dc2626;
+//           }
+//           .btn-black {
+//             background-color: #000;
+//             color: white;
+//           }
+//           .btn-black:hover {
+//             background-color: #171717;
+//           }
+//           .hero-image {
+//             overflow: hidden;
+//             border-radius: 0.5rem;
+//             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//             clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+//           }
+//           .hero-image img {
+//             width: 100%;
+//             height: auto;
+//             transition: transform 0.3s;
+//           }
+//           .hero-image img:hover {
+//             transform: scale(1.05);
+//           }
+//           .stats-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//             text-align: center;
+//           }
+//           .stats-grid {
+//             display: grid;
+//             grid-template-columns: repeat(2, 1fr);
+//             gap: 1.5rem;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid {
+//               grid-template-columns: repeat(6, 1fr);
+//             }
+//           }
+//           .stats-item {
+//             text-align: center;
+//           }
+//           .divider {
+//             border-top: 2px solid #d1d5db;
+//             margin: 2rem 0;
+//             max-width: 1280px;
+//             margin-left: auto;
+//             margin-right: auto;
+//           }
+//           .what-we-do {
+//             background-color: #000;
+//             color: white;
+//             padding: 3rem 1rem;
+//             text-align: center;
+//           }
+//           .what-we-do-heading {
+//             color: #fbbf24;
+//             font-size: 1rem;
+//             font-weight: 600;
+//             margin-bottom: 1rem;
+//           }
+//           .services-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//           }
+//           .services-grid {
+//             display: grid;
+//             grid-template-columns: 1fr;
+//             gap: 2rem;
+//             text-align: center;
+//             max-width: 1280px;
+//             margin: 0 auto;
+//           }
+//           @media (min-width: 640px) {
+//             .services-grid {
+//               grid-template-columns: repeat(2, 1fr);
+//             }
+//           }
+//           @media (min-width: 768px) {
+//             .services-grid {
+//               grid-template-columns: repeat(4, 1fr);
+//             }
+//           }
+//         `}
+//       </style>
+
+//       <section className="hero-section">
+//         <div className="hero-container">
+//           <div className="hero-text">
+//             <h2 className="hero-heading">
+//               We manage your IT, <br /> so you can manage your business.
+//             </h2>
+//             <p className="hero-description">
+//               Take charge of your business continuity with innovative IT solutions.
+//             </p>
+//             <div className="button-group">
+//               <button className="btn btn-red">
+//                 Schedule a Free Consultation
+//               </button>
+//               <button className="btn btn-black">
+//                 Services
+//               </button>
+//             </div>
+//           </div>
+
+//           <div className="hero-image">
+//             <img
+//               src="./heroimage.jpg"
+//               alt="Team"
+//             />
+//           </div>
+//         </div>
+//       </section>
+
+//       <hr className="divider" />
+
+//       <section className="stats-section">
+//         <div className="stats-grid">
+//           <div className="stats-item">
+//             <p>REVIEWED ON</p>
+//             <h3>Clutch</h3>
+//             <p className="text-red-500">★★★★★</p>
+//             <p>2K+ REVIEWS</p>
+//           </div>
+//           <div className="stats-item">
+//             <h4>08 Years</h4>
+//             <p>Proven Track Record</p>
+//           </div>
+//         </div>
+//       </section>
+
+//       <section className="what-we-do">
+//         <p className="what-we-do-heading">WHAT WE DO</p>
+//         <h2>Simplifying IT <br /> for a complex world.</h2>
+//       </section>
+
+//       <section className="services-section">
+//         <div className="services-grid">
+//           <div>
+//             <h3>Cost-effectiveness</h3>
+//             <p>Affordable IT solutions to reduce costs and improve your bottom line.</p>
+//           </div>
+//           <div>
+//             <h3>Innovative Technology</h3>
+//             <p>Keeping you ahead with the latest technology trends.</p>
+//           </div>
+//         </div>
+//       </section>
+//     </>
+//   );
+// };
+
+// export default HeroSection;
+
+
+
+//updated $ plain css import React from 'react';
+
+// const HeroSection = () => {
+//   return (
+//     <>
+//       <style>
+//         {`
+//           .hero-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-section {
+//               padding: 4rem 2rem;
+//             }
+//           }
+//           .hero-container {
+//             max-width: 1280px;
+//             margin: 0 auto;
+//             display: grid;
+//             gap: 3rem;
+//             align-items: center;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-container {
+//               grid-template-columns: 1fr 1fr;
+//             }
+//           }
+//           .hero-text {
+//             text-align: center;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text {
+//               text-align: left;
+//             }
+//           }
+//           .hero-text h2 {
+//             font-size: 1.875rem;
+//             font-weight: 800;
+//             color: #1a202c;
+//             line-height: 1.375;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text h2 {
+//               font-size: 3rem;
+//             }
+//           }
+//           .hero-text p {
+//             margin-top: 1rem;
+//             font-size: 1rem;
+//             color: #4a5568;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text p {
+//               font-size: 1.125rem;
+//             }
+//           }
+//           .hero-buttons {
+//             margin-top: 2rem;
+//             display: flex;
+//             flex-direction: column;
+//             gap: 1rem;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-buttons {
+//               flex-direction: row;
+//               gap: 1rem;
+//             }
+//           }
+//           .hero-buttons button {
+//             padding: 0.5rem 1rem;
+//             border-radius: 0.375rem;
+//             font-weight: 500;
+//             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+//             cursor: pointer;
+//             transition: background-color 0.3s;
+//           }
+//           .hero-buttons button:first-child {
+//             background-color: #ef4444;
+//             color: white;
+//           }
+//           .hero-buttons button:first-child:hover {
+//             background-color: #dc2626;
+//           }
+//           .hero-buttons button:last-child {
+//             background-color: black;
+//             color: white;
+//           }
+//           .hero-buttons button:last-child:hover {
+//             background-color: #1a202c;
+//           }
+//           .hero-image {
+//             position: relative;
+//           }
+//           .hero-image div {
+//             overflow: hidden;
+//             border-radius: 0.5rem;
+//             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+//             clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+//           }
+//           .hero-image img {
+//             width: 100%;
+//             height: auto;
+//             object-fit: cover;
+//             transition: transform 0.3s;
+//           }
+//           .hero-image img:hover {
+//             transform: scale(1.05);
+//           }
+//           .divider {
+//             border-top: 2px solid #e5e7eb;
+//             margin: 2rem auto;
+//             max-width: 1280px;
+//           }
+//           .stats-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//           }
+//           .stats-grid {
+//             display: grid;
+//             gap: 1.5rem;
+//             text-align: center;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid {
+//               grid-template-columns: repeat(6, 1fr);
+//             }
+//           }
+//           .stats-grid div {
+//             padding: 1rem;
+//           }
+//           .stats-grid p {
+//             font-size: 0.75rem;
+//             color: #6b7280;
+//           }
+//           .stats-grid h3 {
+//             font-size: 1.5rem;
+//             font-weight: 700;
+//             color: #1a202c;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid h3 {
+//               font-size: 2.25rem;
+//             }
+//           }
+//           .stats-grid .stars {
+//             color: #ef4444;
+//             font-size: 0.875rem;
+//             font-weight: 700;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid .stars {
+//               font-size: 1.125rem;
+//             }
+//           }
+//           .what-we-do-section {
+//             background-color: black;
+//             color: white;
+//             padding: 3rem 1rem;
+//             text-align: center;
+//           }
+//           .what-we-do-section p {
+//             color: #fbbf24;
+//             font-size: 0.875rem;
+//             font-weight: 600;
+//             margin-bottom: 1rem;
+//           }
+//           .what-we-do-section h2 {
+//             font-size: 1.875rem;
+//             font-weight: 800;
+//             line-height: 1.375;
+//           }
+//           @media (min-width: 768px) {
+//             .what-we-do-section h2 {
+//               font-size: 2.25rem;
+//             }
+//           }
+//           .services-section {
+//             background-color: white;
+//             padding: 4rem 1rem;
+//             margin-top: 2rem;
+//             margin-bottom: 2rem;
+//           }
+//           @media (min-width: 768px) {
+//             .services-section {
+//               padding: 4rem 2rem;
+//             }
+//           }
+//           .services-grid {
+//             max-width: 1280px;
+//             margin: 0 auto;
+//             display: grid;
+//             gap: 2rem;
+//           }
+//           @media (min-width: 640px) {
+//             .services-grid {
+//               grid-template-columns: repeat(2, 1fr);
+//             }
+//           }
+//           @media (min-width: 768px) {
+//             .services-grid {
+//               grid-template-columns: repeat(4, 1fr);
+//             }
+//           }
+//           .services-grid div {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             text-align: center;
+//           }
+//           .services-grid img {
+//             width: 3rem;
+//             height: 3rem;
+//             margin-bottom: 1rem;
+//           }
+//           .services-grid h3 {
+//             font-size: 1.125rem;
+//             font-weight: 700;
+//             color: #1a202c;
+//             margin-bottom: 0.5rem;
+//           }
+//           @media (min-width: 768px) {
+//             .services-grid h3 {
+//               font-size: 1.25rem;
+//             }
+//           }
+//           .services-grid p {
+//             font-size: 0.875rem;
+//             color: #4a5568;
+//           }
+//         `}
+//       </style>
+
+//       {/* Hero Section */}
+//       <section className="hero-section">
+//         <div className="hero-container">
+//           {/* Left Side - Text Content */}
+//           <div className="hero-text">
+//             <h2>
+//               We manage your IT, <br /> so you can manage your business.
+//             </h2>
+//             <p>
+//               Take charge of your business continuity with innovative IT solutions.
+//             </p>
+//             <div className="hero-buttons">
+//               <button>Schedule a Free Consultation</button>
+//               <button>Services</button>
+//             </div>
+//           </div>
+
+//           {/* Right Side - Image */}
+//           <div className="hero-image">
+//             <div>
+//               <img src="./heroimage.jpg" alt="Team" />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Divider */}
+//       <hr className="divider" />
+
+//       {/* Stats Section */}
+//       <section className="stats-section">
+//         <div className="stats-grid">
+//           <div>
+//             <p>REVIEWED ON</p>
+//             <h3>Clutch</h3>
+//             <p className="stars">★★★★★</p>
+//             <p>2K+ REVIEWS</p>
+//           </div>
+//           <div>
+//             <h4>08 Years</h4>
+//             <p>Proven Track Record</p>
+//           </div>
+//           <div>
+//             <h4>98%</h4>
+//             <p>Customer Satisfaction</p>
+//           </div>
+//           <div>
+//             <h4>470+ Projects</h4>
+//             <p>We Have Completed</p>
+//           </div>
+//           <div>
+//             <h4>3 Mins</h4>
+//             <p>Average Answer Time</p>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* What We Do Section */}
+//       <section className="what-we-do-section">
+//         <p>WHAT WE DO</p>
+//         <h2>
+//           Simplifying IT <br /> for a complex world.
+//         </h2>
+//       </section>
+
+//       {/* Services Section */}
+//       <section className="services-section">
+//         <div className="services-grid">
+//           <div>
+//             <img src="./coinimage.png" alt="Cost-effectiveness" />
+//             <h3>Cost-effectiveness</h3>
+//             <p>
+//               Affordable IT solutions to reduce costs and improve your bottom line.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./innovative.png" alt="Innovative Technology" />
+//             <h3>Innovative Technology</h3>
+//             <p>
+//               Keeping you ahead with the latest technology trends.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./industries.png" alt="Industry Expertise" />
+//             <h3>Industry Expertise</h3>
+//             <p>
+//               Specialized in healthcare, finance, and manufacturing industries.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./industries-1.png" alt="Scalability" />
+//             <h3>Scalability</h3>
+//             <p>
+//               Solutions that grow with your business efficiently.
+//             </p>
+//           </div>
+//         </div>
+//       </section>
+//     </>
+//   );
+// };
+
+// export default HeroSection;
+
+// import React from 'react';
+
+// const HeroSection = () => {
+//   return (
+//     <>
+//       <style>
+//         {`
+//           .hero-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-section {
+//               padding: 4rem 2rem;
+//             }
+//           }
+//           .hero-container {
+//             max-width: 1280px;
+//             margin: 0 auto;
+//             display: grid;
+//             gap: 3rem;
+//             align-items: center;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-container {
+//               grid-template-columns: 1fr 1fr;
+//             }
+//           }
+//           .hero-text {
+//             text-align: center;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text {
+//               text-align: left;
+//             }
+//           }
+//           .hero-text h2 {
+//             font-size: 1.875rem;
+//             font-weight: 800;
+//             color: #1a202c;
+//             line-height: 1.375;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text h2 {
+//               font-size: 3rem;
+//             }
+//           }
+//           .hero-text p {
+//             margin-top: 1rem;
+//             font-size: 1rem;
+//             color: #4a5568;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-text p {
+//               font-size: 1.125rem;
+//             }
+//           }
+//           .hero-buttons {
+//             margin-top: 2rem;
+//             display: flex;
+//             flex-direction: column;
+//             gap: 1rem;
+//           }
+//           @media (min-width: 768px) {
+//             .hero-buttons {
+//               flex-direction: row;
+//               gap: 1rem;
+//             }
+//           }
+//           .hero-buttons button {
+//             padding: 0.5rem 1rem;
+//             border-radius: 0.375rem;
+//             font-weight: 500;
+//             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+//             cursor: pointer;
+//             transition: background-color 0.3s;
+//           }
+//           .hero-buttons button:first-child {
+//             background-color: #ef4444;
+//             color: white;
+//           }
+//           .hero-buttons button:first-child:hover {
+//             background-color: #dc2626;
+//           }
+//           .hero-buttons button:last-child {
+//             background-color: black;
+//             color: white;
+//           }
+//           .hero-buttons button:last-child:hover {
+//             background-color: #1a202c;
+//           }
+//           .hero-image {
+//             position: relative;
+//           }
+//           .hero-image div {
+//             overflow: hidden;
+//             border-radius: 0.5rem;
+//             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+//             clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+//           }
+//           .hero-image img {
+//             width: 100%;
+//             height: auto;
+//             object-fit: cover;
+//             transition: transform 0.3s;
+//           }
+//           .hero-image img:hover {
+//             transform: scale(1.05);
+//           }
+//           .divider {
+//             border-top: 2px solid #e5e7eb;
+//             margin: 2rem auto;
+//             max-width: 1280px;
+//           }
+//           .stats-section {
+//             background-color: white;
+//             padding: 2rem 1rem;
+//           }
+//           .stats-grid {
+//             max-width: 1280px;
+//             margin: 0 auto;
+//             display: grid;
+//             gap: 1.5rem;
+//             text-align: center;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid {
+//               grid-template-columns: repeat(6, 1fr);
+//             }
+//           }
+//           .stats-grid div {
+//             padding: 1rem;
+//           }
+//           .stats-grid p {
+//             font-size: 0.75rem;
+//             color: #6b7280;
+//           }
+//           .stats-grid h3 {
+//             font-size: 1.5rem;
+//             font-weight: 700;
+//             color: #1a202c;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid h3 {
+//               font-size: 2.25rem;
+//             }
+//           }
+//           .stats-grid .stars {
+//             color: #ef4444;
+//             font-size: 0.875rem;
+//             font-weight: 700;
+//           }
+//           @media (min-width: 768px) {
+//             .stats-grid .stars {
+//               font-size: 1.125rem;
+//             }
+//           }
+//           .what-we-do-section {
+//             background-color: black;
+//             color: white;
+//             padding: 3rem 1rem;
+//             text-align: center;
+//           }
+//           .what-we-do-section p {
+//             color: #fbbf24;
+//             font-size: 0.875rem;
+//             font-weight: 600;
+//             margin-bottom: 1rem;
+//           }
+//           .what-we-do-section h2 {
+//             font-size: 1.875rem;
+//             font-weight: 800;
+//             line-height: 1.375;
+//           }
+//           @media (min-width: 768px) {
+//             .what-we-do-section h2 {
+//               font-size: 2.25rem;
+//             }
+//           }
+//           .services-section {
+//             background-color: white;
+//             padding: 4rem 1rem;
+//             margin-top: 2rem;
+//             margin-bottom: 2rem;
+//           }
+//           @media (min-width: 768px) {
+//             .services-section {
+//               padding: 4rem 2rem;
+//             }
+//           }
+//           .services-grid {
+//             max-width: 1280px;
+//             margin: 0 auto;
+//             display: grid;
+//             gap: 2rem;
+//           }
+//           @media (min-width: 640px) {
+//             .services-grid {
+//               grid-template-columns: repeat(2, 1fr);
+//             }
+//           }
+//           @media (min-width: 768px) {
+//             .services-grid {
+//               grid-template-columns: repeat(4, 1fr);
+//             }
+//           }
+//           .services-grid div {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             text-align: center;
+//           }
+//           .services-grid img {
+//             width: 3rem;
+//             height: 3rem;
+//             margin-bottom: 1rem;
+//           }
+//           .services-grid h3 {
+//             font-size: 1.125rem;
+//             font-weight: 700;
+//             color: #1a202c;
+//             margin-bottom: 0.5rem;
+//           }
+//           @media (min-width: 768px) {
+//             .services-grid h3 {
+//               font-size: 1.25rem;
+//             }
+//           }
+//           .services-grid p {
+//             font-size: 0.875rem;
+//             color: #4a5568;
+//           }
+//         `}
+//       </style>
+
+//       {/* Hero Section */}
+//       <section className="hero-section">
+//         <div className="hero-container">
+//           {/* Left Side - Text Content */}
+//           <div className="hero-text">
+//             <h2>
+//               We manage your IT, <br /> so you can manage your business.
+//             </h2>
+//             <p>
+//               Take charge of your business continuity with innovative IT solutions.
+//             </p>
+//             <div className="hero-buttons">
+//               <button>Schedule a Free Consultation</button>
+//               <button>Services</button>
+//             </div>
+//           </div>
+
+//           {/* Right Side - Image */}
+//           <div className="hero-image">
+//             <div>
+//               <img src="./heroimage.jpg" alt="Team" />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Divider */}
+//       <hr className="divider" />
+
+//       {/* Stats Section */}
+//       <section className="stats-section">
+//         <div className="stats-grid">
+//           <div>
+//             <p>REVIEWED ON</p>
+//             <h3>Clutch</h3>
+//             <p className="stars">★★★★★</p>
+//             <p>2K+ REVIEWS</p>
+//           </div>
+//           <div>
+//             <h4>08 Years</h4>
+//             <p>Proven Track Record</p>
+//           </div>
+//           <div>
+//             <h4>98%</h4>
+//             <p>Customer Satisfaction</p>
+//           </div>
+//           <div>
+//             <h4>470+ Projects</h4>
+//             <p>We Have Completed</p>
+//           </div>
+//           <div>
+//             <h4>3 Mins</h4>
+//             <p>Average Answer Time</p>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* What We Do Section */}
+//       <section className="what-we-do-section">
+//         <p>WHAT WE DO</p>
+//         <h2>
+//           Simplifying IT <br /> for a complex world.
+//         </h2>
+//       </section>
+
+//       {/* Services Section */}
+//       <section className="services-section">
+//         <div className="services-grid">
+//           <div>
+//             <img src="./coinimage.png" alt="Cost-effectiveness" />
+//             <h3>Cost-effectiveness</h3>
+//             <p>
+//               Affordable IT solutions to reduce costs and improve your bottom line.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./innovative.png" alt="Innovative Technology" />
+//             <h3>Innovative Technology</h3>
+//             <p>
+//               Keeping you ahead with the latest technology trends.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./industries.png" alt="Industry Expertise" />
+//             <h3>Industry Expertise</h3>
+//             <p>
+//               Specialized in healthcare, finance, and manufacturing industries.
+//             </p>
+//           </div>
+//           <div>
+//             <img src="./industries-1.png" alt="Scalability" />
+//             <h3>Scalability</h3>
+//             <p>
+//               Solutions that grow with your business efficiently.
+//             </p>
+//           </div>
+//         </div>
+//       </section>
+//     </>
+//   );
+// };
+
+// export default HeroSection;
